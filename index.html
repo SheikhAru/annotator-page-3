@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MTurk Annotation Task (Sandbox)</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f0f2f5;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 2em auto;
+      background: #fff;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+
+    details {
+      margin-bottom: 1.5em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fafafa;
+    }
+    details summary {
+      padding: 0.75em 1em;
+      font-weight: 500;
+      cursor: pointer;
+      list-style: none;
+    }
+    details[open] summary {
+      background: #e0e0e0;
+    }
+    details ol {
+      padding: 0 1.5em 1em;
+      margin: 0;
+    }
+    details ul, details p {
+      padding: 0 1.5em 1em;
+    }
+
+    #context {
+      margin-bottom: 1.5em;
+      padding: 1em;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background: #fcfcfc;
+      font-style: italic;
+      white-space: pre-wrap;
+    }
+
+    .answer-section {
+      margin-bottom: 1.5em;
+    }
+
+    .answer-section p {
+      margin-bottom: 1em;
+      font-weight: 500;
+    }
+
+    .input-container {
+      display: flex;
+      gap: 1em;
+      align-items: center;
+    }
+
+    #answer-input {
+      flex: 1;
+      padding: 0.75em;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1em;
+      font-family: inherit;
+      background: #fff;
+    }
+
+    #answer-input:focus {
+      outline: none;
+      border-color: #1976d2;
+      box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.1);
+    }
+
+    button {
+      background: #1976d2;
+      color: #fff;
+      border: none;
+      padding: 0.75em 1.5em;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    button:hover {
+      background: #1565c0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+  <details>
+    <summary>Instructions(Click to expand)</summary>
+    <p><strong>Dialog Act Labels:</strong></p>
+    <ol style="margin: 0.5em 0 1em 2em;">
+      <li><strong>Informing</strong> – Providing any information or facts to the listener.</li>
+      <li><strong>Exploring</strong> – Seeking to understand or clarify ideas, feelings, or situations.</li>
+      <li><strong>Questioning</strong> – Asking for information, clarification, or confirmation.</li>
+      <li><strong>Acknowledging</strong> – A way of showing that the listener has received and understood the previous message.</li>
+      <li><strong>Directive</strong> – Giving instructions, requests, or commands to the listener.</li>
+      <li><strong>Sympathizing</strong> – Expressing understanding, care, empathy, or compassion.</li>
+      <li><strong>Commissive</strong> – Refers making a promise, offering, or undertaking a future course of action.</li>
+    </ol>
+  
+    <p><strong>Example 1</strong></p>
+    <p><strong>Context:</strong> "Leo, I really think you're beating around the bush with this guy."</p>
+    <p>What tag from below best describes the context?</p>
+    <ul style="padding-left: 3em; margin-bottom: 1em;">
+      <li><mark style="background-color: lime">Informing</mark> ✅</li>
+      <li>Exploring</li>
+      <li>Questioning</li>
+      <li>Acknowledging</li>
+      <li>Directive</li>
+      <li>Sympathizing</li>
+      <li>Commissive</li>
+    </ul>
+
+    <p><strong>Example 2</strong></p>
+    <p><strong>Context:</strong> "That's a good idea."</p>
+    <p>What tag from below best describes the context?</p>
+    <ul style="padding-left: 3em; margin-bottom: 1em;">
+      <li>Informing</li>
+      <li>Exploring</li>
+      <li>Questioning</li>
+      <li><mark style="background-color: lime">Acknowledging</mark> ✅</li>
+      <li>Directive</li>
+      <li>Sympathizing</li>
+      <li>Commissive</li>
+    </ul>
+
+    <p><strong>Example 3</strong></p>
+    <p><strong>Context:</strong> "Are you going to the annual party?"</p>
+    <p>What tag from below best describes the context?</p>
+    <ul style="padding-left: 3em; margin-bottom: 1em;">
+      <li>Informing</li>
+      <li>Exploring</li>
+      <li><mark style="background-color: lime">Questioning</mark> ✅</li>
+      <li>Acknowledging</li>
+      <li>Directive</li>
+      <li>Sympathizing</li>
+      <li>Commissive</li>
+    </ul>
+
+    <p><strong>Example 4</strong></p>
+    <p><strong>Context:</strong> "As my mum tells me, you won't have it forever, so don't be foolish and pick at deep acne."</p>
+    <p>What tag from below best describes the context?</p>
+    <ul style="padding-left: 3em; margin-bottom: 1em;">
+      <li>Informing</li>
+      <li>Exploring</li>
+      <li>Questioning</li>
+      <li>Acknowledging</li>
+      <li><mark style="background-color: lime">Directive</mark> ✅</li>
+      <li>Sympathizing</li>
+      <li>Commissive</li>
+    </ul>
+
+    <p><strong>Example 5</strong></p>
+    <p><strong>Context:</strong> "So sorry you're feeling self conscious"</p>
+    <p>What tag from below best describes the context?</p>
+    <ul style="padding-left: 3em; margin-bottom: 1em;">
+      <li>Informing</li>
+      <li>Exploring</li>
+      <li>Questioning</li>
+      <li>Acknowledging</li>
+      <li>Directive</li>
+      <li><mark style="background-color: lime">Sympathizing</mark> ✅</li>
+      <li>Commissive</li>
+    </ul>
+    
+  </details>
+
+    <h2>Annotation Task</h2>
+    <div id="context">Loading…</div>
+
+    <form id="annotate"
+          action="https://workersandbox.mturk.com/mturk/externalSubmit"
+          method="POST">
+
+      <!-- MTurk-required fields -->
+      <input type="hidden" name="assignmentId" id="assignmentId_input" value="">
+      <input type="hidden" name="hitId"        id="hitId_input"        value="">
+      <input type="hidden" name="workerId"     id="workerId_input"     value="">
+      <input type="hidden" name="turkSubmitTo" id="turkSubmitTo_input" value="">
+
+      <!-- Your data fields -->
+      <input type="hidden" name="context" id="context_input" value="">
+      <input type="hidden" name="label"   id="label_input"   value="">
+
+      <!-- Answer section with text input -->
+      <div class="answer-section">
+        <p>Identify the metaphor from the context and write in the box. If there are no metaphors keep the box empty.</p>
+        <div class="input-container">
+          <label for="answer-input" style="font-weight: 500; margin-right: 0.5em;">Answer:</label>
+          <input type="text" id="answer-input" name="answer" placeholder="Enter your answer here...">
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+
+    </form>
+
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+  </div>
+
+  <script>
+    const p    = new URLSearchParams(window.location.search);
+    const ctxt = p.get('context')      || 'No context provided';
+    const aid  = p.get('assignmentId') || '';
+    const hid  = p.get('hitId')        || '';
+    const wid  = p.get('workerId')     || '';
+    const tgt  = p.get('turkSubmitTo') || '';
+
+    document.getElementById('context').innerText = "Context: " + ctxt;
+    document.getElementById('context_input').value      = ctxt;
+    document.getElementById('assignmentId_input').value = aid;
+    document.getElementById('hitId_input').value        = hid;
+    document.getElementById('workerId_input').value     = wid;
+    document.getElementById('turkSubmitTo_input').value = tgt;
+
+    document.getElementById('annotate').addEventListener('submit', (e) => {
+      const answerValue = document.getElementById('answer-input').value.trim();
+      document.getElementById('label_input').value = answerValue;
+    });
+  </script>
+</body>
+</html>
