@@ -40,11 +40,7 @@
     details[open] summary {
       background: #e0e0e0;
     }
-    details ol {
-      padding: 0 1.5em 1em;
-      margin: 0;
-    }
-    details ul, details p {
+    details p {
       padding: 0 1.5em 1em;
     }
 
@@ -108,85 +104,21 @@
 
 <body>
   <div class="container">
-  <details>
-    <summary>Instructions(Click to expand)</summary>
-    <p><strong>Dialog Act Labels:</strong></p>
-    <ol style="margin: 0.5em 0 1em 2em;">
-      <li><strong>Informing</strong> – Providing any information or facts to the listener.</li>
-      <li><strong>Exploring</strong> – Seeking to understand or clarify ideas, feelings, or situations.</li>
-      <li><strong>Questioning</strong> – Asking for information, clarification, or confirmation.</li>
-      <li><strong>Acknowledging</strong> – A way of showing that the listener has received and understood the previous message.</li>
-      <li><strong>Directive</strong> – Giving instructions, requests, or commands to the listener.</li>
-      <li><strong>Sympathizing</strong> – Expressing understanding, care, empathy, or compassion.</li>
-      <li><strong>Commissive</strong> – Refers making a promise, offering, or undertaking a future course of action.</li>
-    </ol>
-  
-    <p><strong>Example 1</strong></p>
-    <p><strong>Context:</strong> "Leo, I really think you're beating around the bush with this guy."</p>
-    <p>What tag from below best describes the context?</p>
-    <ul style="padding-left: 3em; margin-bottom: 1em;">
-      <li><mark style="background-color: lime">Informing</mark> ✅</li>
-      <li>Exploring</li>
-      <li>Questioning</li>
-      <li>Acknowledging</li>
-      <li>Directive</li>
-      <li>Sympathizing</li>
-      <li>Commissive</li>
-    </ul>
+    <details>
+      <summary>Instructions (Click to expand)</summary>
+      <p><strong>Your task is to identify metaphor from the given texts. Before that, let’s see the definition and few examples of metaphor.</strong></p>
 
-    <p><strong>Example 2</strong></p>
-    <p><strong>Context:</strong> "That's a good idea."</p>
-    <p>What tag from below best describes the context?</p>
-    <ul style="padding-left: 3em; margin-bottom: 1em;">
-      <li>Informing</li>
-      <li>Exploring</li>
-      <li>Questioning</li>
-      <li><mark style="background-color: lime">Acknowledging</mark> ✅</li>
-      <li>Directive</li>
-      <li>Sympathizing</li>
-      <li>Commissive</li>
-    </ul>
+      <p><strong>Definition:</strong> A metaphor is a figure of speech that, for rhetorical effect, refers to one thing by mentioning another.</p>
 
-    <p><strong>Example 3</strong></p>
-    <p><strong>Context:</strong> "Are you going to the annual party?"</p>
-    <p>What tag from below best describes the context?</p>
-    <ul style="padding-left: 3em; margin-bottom: 1em;">
-      <li>Informing</li>
-      <li>Exploring</li>
-      <li><mark style="background-color: lime">Questioning</mark> ✅</li>
-      <li>Acknowledging</li>
-      <li>Directive</li>
-      <li>Sympathizing</li>
-      <li>Commissive</li>
-    </ul>
+      <p><strong>Example 1:</strong> “They've already <em><u>stood the test of time</u></em> and will stay with us for a long time.”</p>
+      <p><strong>Explanation:</strong> The phrase “stood the test of time” metaphorically refers to lasting reliability or endurance by comparing it to passing a difficult trial.</p>
 
-    <p><strong>Example 4</strong></p>
-    <p><strong>Context:</strong> "As my mum tells me, you won't have it forever, so don't be foolish and pick at deep acne."</p>
-    <p>What tag from below best describes the context?</p>
-    <ul style="padding-left: 3em; margin-bottom: 1em;">
-      <li>Informing</li>
-      <li>Exploring</li>
-      <li>Questioning</li>
-      <li>Acknowledging</li>
-      <li><mark style="background-color: lime">Directive</mark> ✅</li>
-      <li>Sympathizing</li>
-      <li>Commissive</li>
-    </ul>
+      <p><strong>Example 2:</strong> “and living in a house decorated like it would have been 200 years ago would be a great way to <em><u>feed my imagination</u></em> even more!”</p>
+      <p><strong>Explanation:</strong> The metaphor compares stimulating imagination to feeding it like food, suggesting that the old-fashioned house would nourish creativity.</p>
 
-    <p><strong>Example 5</strong></p>
-    <p><strong>Context:</strong> "So sorry you're feeling self conscious"</p>
-    <p>What tag from below best describes the context?</p>
-    <ul style="padding-left: 3em; margin-bottom: 1em;">
-      <li>Informing</li>
-      <li>Exploring</li>
-      <li>Questioning</li>
-      <li>Acknowledging</li>
-      <li>Directive</li>
-      <li><mark style="background-color: lime">Sympathizing</mark> ✅</li>
-      <li>Commissive</li>
-    </ul>
-    
-  </details>
+      <p><strong>Example 3:</strong> “Going to job interviews as an adult and having a childish person <em><u>talk to your acne</u></em> the whole time.”</p>
+      <p><strong>Explanation:</strong> The metaphor compares the experience of job interviews to being treated like a child, by describing the interviewer’s focus on acne instead of the applicant’s professionalism.</p>
+    </details>
 
     <h2>Annotation Task</h2>
     <div id="context">Loading…</div>
@@ -207,7 +139,7 @@
 
       <!-- Answer section with text input -->
       <div class="answer-section">
-        <p>Identify the metaphor from the context and write in the box. If there are no metaphors keep the box empty.</p>
+        <p>Identify the metaphor from the context and write in the box. If there are no metaphors, keep the box empty.</p>
         <div class="input-container">
           <label for="answer-input" style="font-weight: 500; margin-right: 0.5em;">Answer:</label>
           <input type="text" id="answer-input" name="answer" placeholder="Enter your answer here...">
