@@ -154,13 +154,13 @@
 
   <script>
     const p    = new URLSearchParams(window.location.search);
-    const ctxt = p.get('context')      || 'No text provided';
+    const ctxt = p.get('context')      || 'No Context provided';
     const aid  = p.get('assignmentId') || '';
     const hid  = p.get('hitId')        || '';
     const wid  = p.get('workerId')     || '';
     const tgt  = p.get('turkSubmitTo') || '';
 
-    document.getElementById('context').innerText = "Text: " + ctxt;
+    document.getElementById('context').innerText = "Context: " + ctxt;
     document.getElementById('context_input').value      = ctxt;
     document.getElementById('assignmentId_input').value = aid;
     document.getElementById('hitId_input').value        = hid;
